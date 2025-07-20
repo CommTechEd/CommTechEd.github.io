@@ -42,7 +42,7 @@
         <br />voltage drop | voltage divide | forward voltage
         <br />alternating current | direct current
         <br />analog | digital
-        <br />input | output | impedance
+        <br />input | output | impedance | GPIO | ADC | Serial UART USART | I2C
         <br />driving high |driving low | high impedance
         <br />sinking | sourcing
         <br />pulled high | pulled low
@@ -71,6 +71,8 @@
         magic smoke!).
         <br />We care about voltage and how it drops across components because that is how information is encoded in our
         systems.
+        <br />There are direct relationships between current (I), voltage (V), resistance (R), and power (R) however
+        some devices break this law; they're called nonohmic. Not all nonohmic devices behave the same but diodes like LEDs can be considered to have a fixed voltage drop called a forward voltage and very little resistance when conducting; hence why all LEDs need some sort of current control and can't be powered directly unless the voltage is just above their foward voltage.
         <br />The circuit simulations below will allow you to experiment and build intuitions on how to analyze basic
         circuits.
         <br /><a
@@ -85,6 +87,9 @@
         <br /><a
             href="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWEAmaBOZyAsyAcBmAdlzGXyzSxC3xCQUjoFMBaMMAKACVxSVsQANiqYqjRlkZJxUaAg4AnXsn4iBoqP0gcAJiHwIVYLFSy5GxkSB1MAZgEMArgBsALhzCCVB75FPn9PxRrOyc3FmcmPQgZGEhOAGd9Q3ATVVSxTQdnBKYOAHd0jQ18IO1C4vUBSygC6gCas0YNcvrGUv9mgW0Aczb0w1x08TqSoJ9AsQ4gA"
             target="_blank">Easiest path demonstration</a>
+        <br /><a
+            href="https://www.falstad.com/circuit/circuitjs.html?ctz=CQAgjCAMB0l3BWcMBMcUHYMGZIA4UA2ATmIxAUgoqoQFMBaMMAKACVwNCRCAWcXvz5QRvWiKowELAE4g0eENhTy8i5SLBwWAc1XqVyqhskswGfgqUrz3Ytwha4UWJCQB5ABYBbAJYBjEABhAHtvAAcQgDs6KIAXMwt5fE4HLnkxcGRnKQxiFQA5aJCfAJB-MMiY+N19VOsqWwl2eqswQWTFSRBMpG6pM0IVNvSUNVaQABM6ADMAQwBXABs4hiW6Saz+2FYQrOEqMVJqGDcRGyUWPfIDnshjvtgUJAgVcmwWIA"
+            target="_blank">Ohmic v. nonohmic example</a>
     </p>
 
     <h2>Basic Circuit Components & Schematics</h2>
@@ -139,6 +144,14 @@
         Use port manipulation and bitwise operators to blink an LED using only two lines of code in your loop or blink
         function definition.
     </p>
+
+    <h2>Special Challenges</h2>
+    <p>These challenges can be done on your own or if you have extra time in class. They are meant to check for
+        understanding not to trick you</p>
+    <ol>
+        <li>You have four LEDs and a power source that is regulated at 5V and can handle up to 40mA. Draw a schematic that will light all four LEDs at their max current of 20mA each.</li>
+        <li>How many LEDs can you independantly control with 3 GPIO pins? (hint: it is more than 3)</li>
+    </ol>
 
     <a href="../index.html">Back to Home</a>
 
