@@ -37,6 +37,7 @@
         <br />Motor speed isn't controlled by changing the voltage as most GPIO pins can only go high or low.
         <br />Instead, motor speed is controlled by changing pulsing the voltage. How long each pulse is determines the average voltage across time applied to the motor thus changing its speed. This is called pulse width modulation (PWM)
         <br />To make a pulsing voltage automatic, it is necessary to use the timer peripherals of your uC. This is easily done with the Arduino core by using a PWM pin and the analogWrite() function (although PWM isn't true analog).
+        <br />The direction of the motor is able to be controlled by a circuit called an H-bridge. Your motor driver control circuitry drives the H-bridge so that there is no potential for shorts.
     </p>
 
     <h2>Getting moving challenge</h2>
@@ -47,7 +48,7 @@
         <br />Wire and program your robot so that it will move in a square four times increasing its speed on each lap with the max speed being on the final lap.
         <br />Please be sure to use proper programming style - you should have defined functions for your robot to go forward and turn.
     </p>
-    
+
     <a href="../index.html">Back to Home</a>
 </body>
 
