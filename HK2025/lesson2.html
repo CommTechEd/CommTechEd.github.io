@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lesson 2</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to Home</a>
+
+    <h2>Driving motors</h2>
+
+    <p>
+        Since electricity is electrons moving through wires, imagine how many have to flow to get a motor to spin!
+        <br />The high current demand and the fact that a brushed motor is an inductive load means that you have to take
+        care when controlling motors.
+        <br />Be careful with motor driver specifications - they may say they're rated at 2A per channel but that could
+        only mean for a few seconds without thermal regulation.
+        <br />The current that is demanded by a motor is based upon the motor's load. Stalling a motor is a simple way
+        of maxing out a motor so we call the max current a motor will draw the stall current.
+        <br />Inductive load in this case means you're using the electronics to create an electromagnetic fields that
+        alternate causing a motor to spin.
+        <br />Motor coils are very thin wire with thin insulation - overvolting and overheating a motor could cause the
+        wires to heat, melt the insulaiton, and short out.
+        <br />Another consideration is that once you build electromagnetic fields, they must collapse when the motor
+        turns off. This is conservation of energy and is called flyback.
+        <br />Flyback - the reverse surge of power that occurs when motors are stopped can damage components like
+        transistors. A flyback diode is often included on the motor driver boards.
+        <br />Driver boards also have control logic that prevent shorts and may also include circuits for isolation
+        (i.e. noise reduction) to prevent interfernce with data and voltage regulation.
+        <br />Motors are generally connect directly to your battery and then need a logic level voltage to control them.
+        Pay very close attention to the inputs and outputs of your motor driver boards.
+        <br />Sometimes a voltage input can become a voltage source depending if the board is configurable! Although it
+        is OK and probably required to connect the grounds, you don't want to do the same for the positive connections!
+        <br /><a href="https://www.cytron.io/p-3amp-4v-16v-dc-motor-driver-2-channels" target="_blank">Here</a> is your
+        Motor driver information.
+        <br />Motor speed isn't controlled by changing the voltage as most GPIO pins can only go high or low.
+        <br />Instead, motor speed is controlled by changing pulsing the voltage. How long each pulse is determines the average voltage across time applied to the motor thus changing its speed. This is called pulse width modulation (PWM)
+        <br />To make a pulsing voltage automatic, it is necessary to use the timer peripherals of your uC. This is easily done with the Arduino core by using a PWM pin and the analogWrite() function (although PWM isn't true analog).
+    </p>
+
+    <h2>Getting moving challenge</h2>
+    <p>
+        Break this challenge down first in your notebook - please do not try to tackle it all at once! Please check in with me often.
+        <br />Build your robot chassis using the parts provided.
+        <br />Sketch a schematic for your motor driver circuit - please have it checked before wiring.
+        <br />Wire and program your robot so that it will move in a square four times increasing its speed on each lap with the max speed being on the final lap.
+        <br />Please be sure to use proper programming style - you should have defined functions for your robot to go forward and turn.
+    </p>
+    
+    <a href="../index.html">Back to Home</a>
+</body>
+
+</html>
