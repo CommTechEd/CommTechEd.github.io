@@ -57,9 +57,9 @@
         Start with power distribution and then then input and output from the perspective of the uC.
         <br />For power distibution, realize that a power in could be both a source of power or draw power depending on the circumstances.
         <br />Also be aware of low impedance input pins that may draw power unexpectantly like the input pins on your motor driver board (you don't want to power motors only through your 5V USB port!)
-        <br />Once you determined how power will be distributed, then focus on what will be connect to your uC as inputs. Test these inputs as you wire them using the serial monitor.
-        <br />Once you know the inputs work, you can then wire up the outputs. Now you can use your inputs to test the outputs one at a time as you wire them.
-        <br />Now that you have confirmed all inputs and outputs are functional, start breaking down your algorithm into the most basic behaviors (e.g. motor spin counterclockwise)
+        <br />Once you determined how power will be distributed by drawing a schematic, wiring it, and optionally verifying connections via DMM (if things don't light up), then focus on what will be connect to your uC as inputs. Draw a schematic first, wire it, and then write a program to test these inputs as you wire them using the serial monitor.
+        <br />Once you know the inputs work, you can then wire up the outputs. Again, start by adding to your schematic, wiring it, and then programming. You may use your inputs to test the outputs one at a time as you wire them.
+        <br />Now that you have confirmed all inputs and outputs are functional and have a recorded a full schematic (handy in case something gets unplugged!), start breaking down your algorithm into the most basic behaviors (e.g. motor spin counterclockwise).
         <br />Combine your basic behaviors into simple behaviors and test them. Once tested, you may define them as their own function. (e.g. go forward)
         <br />Now use your custom functions to code out your full complex behavior.
     </p>
