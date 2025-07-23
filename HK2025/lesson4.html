@@ -11,8 +11,29 @@
     <h2>Using the HuskyLens w/ robot state machine</h2>
 
     <p>
-        Here are the resources you need to get started on this lesson: <a href="https://github.com/HuskyLens/HUSKYLENSArduino" target="_blank">HuskyLens API</a> | <a href="https://wiki.dfrobot.com/HUSKYLENS_V1.0_SKU_SEN0305_SEN0336" target="_blank">HuskyLens Wiki</a>
+        Here are the resources you need to get started on this lesson: <a
+            href="https://github.com/HuskyLens/HUSKYLENSArduino" target="_blank">HuskyLens API</a> | <a
+            href="https://wiki.dfrobot.com/HUSKYLENS_V1.0_SKU_SEN0305_SEN0336" target="_blank">HuskyLens Wiki</a>
+        Also here is the <a href="https://www.tinkercad.com/classrooms/hS8iOnPLhGE/activities/4gPh1qyiTOL"
+            target="_blank"> Tinkercad activity</a> on what a state machine can look like for your robot and why you
+        need one.
     </p>
+    <p>
+        A state machine is just a fancy way to say that you want your robot to be in a stable behavior based upon its
+        inputs and what behavior it is currently in.
+        <br />If you just relied on the inputs to change your robot's behavior without remembering its current state,
+        then you would be constantly calling functions without need.
+        <br />A typical state machine is just a series of if / else if / else statements. To make it simple, each
+        condition should be mutually exclusive (i.e. unique).
+        <br />The default condition (else) is optional. This could be a failsafe to throw an error that your inputs went
+        out of range.
+    </p>
+    <h2>Spin and get ball challenge</h2>
+    <p>
+        Your husklens will be able to give you information on whether or not it sees the ball after you train it.
+        <br />Constantly read in data from the husklens in your loop function and setup a simple state machine so that your robot's complex behavior is to spin until it sees the ball and then go forward when it sees the ball.
+    </p>
+
     <a href="../index.html">Back to Home</a>
 </body>
 
