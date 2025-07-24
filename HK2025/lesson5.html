@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lesson 5</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to Home</a>
+
+    <h2>Lesson 5 - Hardware interrupts</h2>
+
+    <p>
+        A hardware interrupt will allow you to call a special function called an interrupt service routine (ISR) at any point while your program is running.
+        <br />See <a href="https://www.tinkercad.com/classrooms/hS8iOnPLhGE/activities/7ZE0Li5si0z" target="_blank">this</a> example for how one works.
+        <br />Most examples use the digitalPinToInterrupt() function call as the first parameter of the attachInterupt() function but you should be able to use a good <a href="https://upload.wikimedia.org/wikipedia/commons/c/c9/Pinout_of_ARDUINO_Board_and_ATMega328PU.svg" target="_blank">pinout diagram</a> to determine what interrupt channel coresponds to what pin.
+        <br />The second parameter in the attachInterrupt() function is a good name for your interrupt service routine; it should be obvious what your ISR is for and is doing by its name.
+        <br />The third parameter determines when the interrupt will trigger using macros FALLING, HIGH, LOW, RISING, and BOTH. Not all macros are supported on all boards.
+        <br />This all has to do with the voltage bevavior on the interrupt pin.
+        <br />The one you may use the most is FALLING b/c that is what will happen to the voltage when you press a button that is connected to an internal pullup.
+    </p>
+    <a href="../index.html">Back to Home</a>
+</body>
+
+</html>
