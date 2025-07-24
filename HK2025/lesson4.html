@@ -34,6 +34,12 @@
         <br />Constantly read in data from the husklens in your loop function and setup a simple state machine so that your robot's complex behavior is to spin until it sees the ball and then go forward when it sees the ball.
         <br />Note: it is best that you use the <a href="https://wiki.dfrobot.com/HUSKYLENS_V1.0_SKU_SEN0305_SEN0336#7.2%20Object%20Tracking" target="_blank">object tracking mode</a> of the huskyLens.
         <br />To begin, study the I2C demo. To load the demo, include the library to your project, then look in the pio/libdeps/HuskyLens/examples.
+        <br />Study the example and learn how the library is written to get data from the HuskyLens - the data is organized as a struct (basically a group of variables all under one name) called HUSKYLENSResult and buffered in the HuskyLens as multiple instances of that struct.
+        <br />Now work to optimize the example after trainingn your husklens on the ball object.
+        <br />You may not want to do <code>while (huskylens.available());</code> but instead do a <code>if(huskylens.availabel());</code> depending if the buffer if FIFO or LIFO buffer (i.e. are you going to get the latest data back first).
+        <br />You may want to consider skipping the isLearned check or put it in the setup as you'll most likely know you're huskylens is trianed.
+        <br />Also be aware that there are overloaded functions in the API. For instance, you don't need to read in all the blocks if you know what ID you're looking for.
+
         <br /><a href="https://www.baldengineer.com/arduino-f-macro.html" target="_blank">Here</a> is a good post about why the example uses the F() macro.
     </p>
 
