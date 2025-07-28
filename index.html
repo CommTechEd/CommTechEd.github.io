@@ -14,27 +14,30 @@
 
     <h2>Today's Goals</h2>
     <ol>
-        <li>Debrief & reflect on last week</li>
-        <li>Discuss how to use port manipulation to replace GPIO function calls using <a href="https://www.tinkercad.com/classrooms/hS8iOnPLhGE/activities/3T2uDhfKi21" target="_blank">Tinkercad activity here.</a></li>
-        <li>Discuss using encoders to get accurate distances from motors using Tinkercad activity</li>
-        <li>Calculate and try to get your robots to do one 360 degree spin (we practice this so you can make accurate spins to line up for ball)</li>
-        <li>Get your robot schematics in EasyEDA. <a href="https://u.easyeda.com/join?type=team&key=2f7f35fc9b30cb491b4cf613ca201665&inviter=91f2325fa81f49a081d909b3a3310bb5&team_uuid=bc48dae775a94cf9bc97a32f280dee60" target="_blank">Join the EasyEDA team</a> after logging in with Google account</li>        
+        <li>Get APDS9960 sensor example to work</li>
+        <li>Be able to write your own functions to talk to and read from APDS9960 in lesson 6</li>
+        <li>Get your robot to know when it has captured the ball!</li>
+        <li>Finalize schematic and being laying out PCB - "never trust the autorouter" ~ Dave Jones</li>
     </ol>
 
     <h2>Lesson Links</h2>
     There is a lot of information especially in the first two lessons - please take your time and try to fight feeling
     overwhelmed. These will remain up so you can review them at anytime (and you probably will need to review them!).
-    <br /><a href="HK2025/lesson0.html">Lesson 0 - Intro to the engineering mindset, the design process, and documentation & setting up toolchain</a>
+    <br /><a href="HK2025/lesson0.html">Lesson 0 - Intro to the engineering mindset, the design process, and
+        documentation & setting up toolchain</a>
     <br /><a href="HK2025/lesson1.html">Lesson 1 - Basics of Electronics</a>
     <br /><a href="HK2025/lesson2.html">Lesson 2 - Driving Motors</a>
     <br /><a href="HK2025/lesson3.html">Lesson 3 - Sensing the world</a>
     <br /><a href="HK2025/lesson4.html">Lesson 4 - State machines & HuskyLens</a>
     <br /><a href="HK2025/lesson5.html">Lesson 5 - Hardware interrupts</a>
+    <br /><a href="HK2025/lesson6.html">Lesson 6 - I2C & the APDS9960</a>
+
     </p>
 
     <h2>Common Resources</h2>
     <p>
-        <a href="https://www.adafruit.com/product/3595" target="_blank">Light, color, proximity, & gesture sensor</a> product page (APDS9960).
+        <a href="https://www.adafruit.com/product/3595" target="_blank">Light, color, proximity, & gesture sensor</a>
+        product page (APDS9960).
         <br /><a href="assets\seeeduinoNano.pdf" target="_blank">Seeeduino nano schematic</a> | <a
             href="https://wiki.seeedstudio.com/Seeeduino-Nano/" target="_blank">Seeeduino Nano Wiki</a>
         <br /><a href="https://docs.arduino.cc/language-reference/" target="_blank">Arduino reference</a>
@@ -52,6 +55,20 @@
 
     <h1>-------Previous Daily Plans Archived Below------</h1>
 
+    <h2>2nd Monday's Goals</h2>
+    <ol>
+        <li>Debrief & reflect on last week</li>
+        <li>Discuss how to use port manipulation to replace GPIO function calls using <a
+                href="https://www.tinkercad.com/classrooms/hS8iOnPLhGE/activities/3T2uDhfKi21" target="_blank">Tinkercad
+                activity here.</a></li>
+        <li>Discuss using encoders to get accurate distances from motors using Tinkercad activity</li>
+        <li>Calculate and try to get your robots to do one 360 degree spin (we practice this so you can make accurate
+            spins to line up for ball)</li>
+        <li>Get your robot schematics in EasyEDA. <a
+                href="https://u.easyeda.com/join?type=team&key=2f7f35fc9b30cb491b4cf613ca201665&inviter=91f2325fa81f49a081d909b3a3310bb5&team_uuid=bc48dae775a94cf9bc97a32f280dee60"
+                target="_blank">Join the EasyEDA team</a> after logging in with Google account</li>
+    </ol>
+
     <h2>Friday's Goals</h2>
     <ol>
         <li>Discuss hardware interrupts and get your robot to bump around the field</li>
@@ -60,10 +77,11 @@
             <br /> -defensive program that will try to block the ball from going past you.
             <br /> -offensive program that will find the ball and try to push it past your opponent.
             <br /> -any robot that crosses the taped lines will earn a point for the opposing robot and kick will reset
-            <br /> -may add foam core or other structural components to help - robot should fit in 18cm cube (about the current width)
-        </li>        
+            <br /> -may add foam core or other structural components to help - robot should fit in 18cm cube (about the
+            current width)
+        </li>
     </ol>
-    
+
     <h2>Thursday's Goals</h2>
     <ol>
         <li>Please make sure you have functions for your robots current simple behaviors</li>
@@ -71,8 +89,11 @@
         <li>Complete lesson 3 to have robot stop on the line</li>
         <li>Solder male headers onto voltage regulator and wire up the HuskyLens</li>
         <li>Create a new project using the HuskyLens library</li>
-        <li>Attempt to read data from the HuskyLens by copyin and pasting the husklens I2C example into your main.cpp (in example, ctrl+A to select all the ctrl+C to copy. Then ctrl+V to paste after selecting all again in main.cpp) </li>
-        <li>Use the data from the example after training the Husklens on the ball and the API to find the best way to tell if it sees the ball</li>
+        <li>Attempt to read data from the HuskyLens by copyin and pasting the husklens I2C example into your main.cpp
+            (in example, ctrl+A to select all the ctrl+C to copy. Then ctrl+V to paste after selecting all again in
+            main.cpp) </li>
+        <li>Use the data from the example after training the Husklens on the ball and the API to find the best way to
+            tell if it sees the ball</li>
     </ol>
 
     <h2>Wednesday's Goals Goals</h2>
@@ -89,7 +110,7 @@
         <li>Move on to lesson 3 - stop at line challenge</li>
         <li>If time, start work on what will be lesson 4 - the gesture sensor and I2C</li>
     </ol>
-    
+
     <h2>Tuesday's Goals</h2>
     <ol>
         <li>Get your journals loaded up and be sure to upload pictures and take notes of all of our work (maybe try

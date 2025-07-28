@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lesson 6</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to Home</a>
+
+    <h2>I2C and the APDS9960</h2>
+    <p>
+        The APDS9960 is a very powerful yet economical sensor that will allow you to detect if you've captured the ball.
+        It does this in part b/c it will pulse the IR and also allow for automatic ambient light subtraction making this sensor more robust than the simple line follower.
+        <br />In order to talk I2C you must know a few basic items about the protocol. There is a leader (typically the microcontroller) that may have multiple followers (e.g. sensors).
+        <br />Since all components share the same two communication lines (Serial Data/SDA and Serial Clock/SCL) every device must have an address.
+        <br />I2C addresses are typically one byte and contain a bit that determines if you are going to be writing data or reading data (the R/W bit).
+        The Arduino Wire libary will only use 7-bit addresses and append the appropriate R/W bit depending on what method you're using.
+        <br />Many datasheets may give the 8-bit write address so to find the 7-bt address, quickly run the <a href="https://playground.arduino.cc/Main/I2cScanner/" target="_blank">I2C scanner program</a>.
+        <br />After scanning, the first thing you want to do is try to communicate to the device and get its unique ID in the ID register.
+        To do this, simply write the address of the ID register to let the device know where you're reading from. Then request 1 byte back and print out the result. It should match what is in the datasheet if the ID register is availble.
+        <br />Notice to read from a device, you must write what register address you'd like to read from first and then make the request.
+        <br />To write to a device, simply begin trasmission, write the address of the byte you'd like to write, and then write the data you'd like at that regiser address.
+        Many devices will allow you to read or write consecutive bytes - the register address will automatically increment.
+    </p>
+    <p>
+        By studying the datasheet of your I2C devices, it'll give you great insight of how it works - moreso than any library or API can. It also gives you full control over the device.
+        For example, you can use tune proximity sensor to accurately detect the ball at a distance by adjusting the pulse width (long pulses == longer range == more power), pulse integration time (more time == greater sensitivity), and LED intensity (greater == more range == more power).
+        <br />You can also set interrupts for a saturation error (e.g. ambient conditions become too bright) or a persitance filter on upper and lower thresholds (must read within threshold a set number of times).
+    </p>
+
+    <h2>Ball detection w/ custom functions challenge</h2>
+    <p>
+        Use I2C Scanner to scan for sensor after attatchign it to the grove sensor port and 7-bit address.
+        <br />Succesfully get the ID byte to print to the serial monitor using a apdsBegin() function you write and call in setup.
+        <br />Use an APDS9960 library to test out getting the proximity reading from the example.
+        <br />Use write own functions to configure the proximity sensor for the best results.
+        <br />Advanced: set up an interrupt and use it for ball detection on an IO pin (note, you can just configure the sensor's hardware interrupt and poll it on the microcontroller).
+    </p>
+    <a href="../index.html">Back to Home</a>
+</body>
+
+</html>
