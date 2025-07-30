@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Lesson 7</title>
+</head>
+
+<body>
+    <a href="../index.html">Back to Home</a>
+
+    <h2>Inertia Measurement Unit (IMU) BNO055</h2>
+
+    <p>
+        The IMU is a very complex device. Fortunately, a lot of the smarts are baked into the sensor already and we're using it for a simple yaw heading.
+        Yaw readings are difficult to achieve because they aren't impacted simply by gravity - it takes complex sensor fusion between two to three sensors to determine where you're pointing accurately while moving.
+        IMUs are also sensitive to impacts and vibrations. If you use the IMU libraries out of the box, it is likely you'll get good readings while still but horrible readings while moving!
+        Fortunately, an RCJ team, the BohleBots from Germany, put in time and effort to study the BNO055 sensor for RCJ soccer application and published a public library for everyone to use. We can work off of their efforts (and always give credit to them!).
+    </p>
+    <h2>Heading Challenge</h2>
+    <p>
+        Study the readme, .h, and .c files of the <a href="https://github.com/zischknall/BohleBots_BNO055" target="_blank">BohleBots library</a>
+        Create a new package and install the Bohlebots library.
+        Have some way of checking to ensure your sensor is calbirated before the robot moves after powering it on (e.g. use proximitity sensor to lock into a while loop in setup function until something is in front). Check out <a href="https://www.youtube.com/watch?v=yPfQK75dZbU" target="_blank">this guy's videos</a> for really good details and <a href="https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor/device-calibration" target="_blank">this website</a> for a general overview.
+        Experiment with spinning to your goal after fixing a relative heading (related to where your robot turns on in the field) with your robot and moving around a bit.
+        You may also experiment with using an aboslute heading.
+        Also experiment with NDOF mode (nine degrees of freedom mode) with magnetometer turned off and turned on.
+        Find the most accurate mode, calibration procedure, and algorithim to ensure your robot may point to the goal after recieving the ball.
+    </p>
+    <a href="../index.html">Back to Home</a>
+</body>
+
+</html>
