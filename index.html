@@ -16,7 +16,8 @@
     <ol>
         <li>Reflect - Engineering process is about iteration, persistance, patience, reflection.</li>
         <li>Setup Arduino IDE to program the RP2040 (we have KB2040 - same basic thing) and get the neopixel to work</li>
-        <li>Rewire the IMU and potentially the proximity sensor to the KB2040 using the solderable breadboard.</li>
+        <li>Rewire the IMU and potentially the proximity sensor to the KB2040 using the solderable breadboard. Use the neopixel for feedback</li>
+        <li>Tweak IMU settings and/or algorithm to find goal to have reliable results while robot is moving. <a href="https://www.bosch-sensortec.com/media/boschsensortec/downloads/application_notes_1/bst-bno055-an007.pdf" target="_blank">BNO055 Quick start guide</a></li>
         <li>WARNING: the KB2040 uses 3v3 for Vcc so you'll need a new rail on your solderable breadboard if not using qt cables.</li>
         <li>It is OK to use 3v3 to talk to 5v. It is not OK to use 5V to talk to 3v3!</li>
         <li>(if time) Finalize schematic and being laying out PCB - "never trust the autorouter" ~ Dave Jones</li>
