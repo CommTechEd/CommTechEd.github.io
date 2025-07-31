@@ -14,12 +14,10 @@
 
     <h2>Today's Goals</h2>
     <ol>
-        <li>Reflect - Engineering process is about iteration, persistance, patience, reflection.</li>
-        <li>Setup Arduino IDE to program the RP2040 (we have KB2040 - same basic thing) and get the neopixel to work</li>
-        <li>Rewire the IMU and potentially the proximity sensor to the KB2040 using the solderable breadboard. Use the neopixel for feedback</li>
-        <li>Tweak IMU settings and/or algorithm to find goal to have reliable results while robot is moving. <a href="https://www.bosch-sensortec.com/media/boschsensortec/downloads/application_notes_1/bst-bno055-an007.pdf" target="_blank">BNO055 Quick start guide</a></li>
-        <li>WARNING: the KB2040 uses 3v3 for Vcc so you'll need a new rail on your solderable breadboard if not using qt cables.</li>
-        <li>It is OK to use 3v3 to talk to 5v. It is not OK to use 5V to talk to 3v3!</li>
+        <li>Complete soldering and building your robot</li>
+        <li>Use the code templates to finish and test unit tests for motorStateTest, lineIntTest, haveBallTest, cameraStateTest</li>
+        <li>Write a unit test for the Pico to communicate "seeGoalFlag" to the Nano - just use the lights! (this unit test has two programs!)</li>
+        <li>Write a final program that puts all the unit tests together and plays the game - note when to clear the flags!</li>
         <li>(if time) Finalize schematic and being laying out PCB - "never trust the autorouter" ~ Dave Jones</li>
     </ol>
 
@@ -60,11 +58,29 @@
         <br /><a href="https://github.com/zischknall/BohleBots_BNO055" target="_blank">Bohlebots BNO055 Library
             Github</a> | <a
             href="https://learn.adafruit.com/adafruit-bno055-absolute-orientation-sensor/device-calibration"
-            target="_blank">BNO055 Calibration</a> |  <a href="https://cdn-shop.adafruit.com/datasheets/BST_BNO055_DS000_12.pdf" target="_blank">BNO055 datasheet.</a>
+            target="_blank">BNO055 Calibration</a> | <a
+            href="https://cdn-shop.adafruit.com/datasheets/BST_BNO055_DS000_12.pdf" target="_blank">BNO055
+            datasheet.</a>
     </p>
 
     <h1>-------Previous Daily Plans Archived Below------</h1>
-     <h2>2nd Wednesday's Goals</h2>
+    <h2>2nd Thursday's Goals</h2>
+    <ol>
+        <li>Reflect - Engineering process is about iteration, persistance, patience, reflection.</li>
+        <li>Setup Arduino IDE to program the RP2040 (we have KB2040 - same basic thing) and get the neopixel to work
+        </li>
+        <li>Rewire the IMU and potentially the proximity sensor to the KB2040 using the solderable breadboard. Use the
+            neopixel for feedback</li>
+        <li>Tweak IMU settings and/or algorithm to find goal to have reliable results while robot is moving. <a
+                href="https://www.bosch-sensortec.com/media/boschsensortec/downloads/application_notes_1/bst-bno055-an007.pdf"
+                target="_blank">BNO055 Quick start guide</a></li>
+        <li>WARNING: the KB2040 uses 3v3 for Vcc so you'll need a new rail on your solderable breadboard if not using qt
+            cables.</li>
+        <li>It is OK to use 3v3 to talk to 5v. It is not OK to use 5V to talk to 3v3!</li>
+        <li>(if time) Finalize schematic and being laying out PCB - "never trust the autorouter" ~ Dave Jones</li>
+    </ol>
+
+    <h2>2nd Wednesday's Goals</h2>
     <ol>
         <li>Complete lesson 7 with IMU</li>
         <li>Keep working on having ball, find goal, make goal</li>
@@ -75,7 +91,8 @@
         <li>Get APDS9960 sensor example to work</li>
         <li>Be able to write your own functions to talk to and read from APDS9960 in lesson 6</li>
         <li>Get your robot to know when it has captured the ball!</li>
-        <li>Finalize schematic and being laying out PCB - "never trust the autorouter" ~ Dave Jones (didn't complete)</li> 
+        <li>Finalize schematic and being laying out PCB - "never trust the autorouter" ~ Dave Jones (didn't complete)
+        </li>
     </ol>
 
     <h2>2nd Monday's Goals</h2>
