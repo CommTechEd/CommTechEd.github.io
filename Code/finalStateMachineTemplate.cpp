@@ -68,6 +68,6 @@ void loop()
   }
   else
   {
-    noStateCount++;
+    noStateCount++; //again could put small delay here but probably sufficient if maxed out at 4,294,967,295
   }
 }
